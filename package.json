@@ -9,11 +9,14 @@
     "build": "gulp build",
     "build-preview": "gulp build-preview",
     "start": "gulp server",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "algolia-index-push": "./scripts/algolia-index-push",
+    "algolia-index-clear": "./scripts/algolia-index-clear"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "algoliasearch": "^3.24.3",
     "autoprefixer": "^6.6.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",

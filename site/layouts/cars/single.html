@@ -1,0 +1,26 @@
+{{ partial "head" . }}
+{{ partial "nav" . }}
+
+<header>
+  <div>
+     <input type="text" id="search-input" placeholder="Busca marca, modelo o lugar">
+     <!-- We use a specific placeholder in the input to guides users in their search. -->
+  </div>
+</header>
+<main>
+    <div class="left-column">
+      <div id="price-refinement"></div>
+      <div id="manufacturer-refinement"></div>
+      <div id="model-refinement"></div>
+      <div id="year-refinement"></div>
+      <div id="condition-refinement"></div>
+      <div id="fuel-refinement"></div>
+    </div>
+    <div class="right-column">
+      <div id="hits"></div>
+      <div id="pagination"></div>
+    </div>
+    <p style="clear:both;"></p>
+</main>
+
+{{ partial "footer" . }}
