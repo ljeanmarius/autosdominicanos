@@ -1,26 +1,41 @@
 {{ partial "head" . }}
 {{ partial "nav" . }}
 
-<header>
-  <div>
-     <input type="text" id="search-input" placeholder="Busca marca, modelo o lugar">
-     <!-- We use a specific placeholder in the input to guides users in their search. -->
+<div class="content-wrapper">
+  <aside>
+    <section class="facet-wrapper">
+      <div id="price-refinement" class="facet"></div>
+    </section>
+    <section class="facet-wrapper">
+      <div id="manufacturer-refinement" class="facet"></div>
+      <div id="model-refinement" class="facet"></div>
+    </section>
+    <section class="facet-wrapper">
+      <div id="year-refinement" class="facet"></div>
+      <div id="condition-refinement" class="facet"></div>
+      <div id="fuel-refinement" class="facet"></div>
+    </section>
+  </aside>
+
+  <div class="results-wrapper">
+    <div class="input-group">
+       <input type="text" id="search-input" placeholder="Busca marca, modelo o lugar">
+    </div>
+<!--
+    <section id="results-topbar">
+      <div class="sort-by">
+        <span>Orden</span>
+        <div id="sort-by-selector"></div>
+      </div>
+      <div id="stats" class="text-muted"></div>
+    </section>
+-->
+    <main id="hits"></main>
+    <section id="pagination"></section>
   </div>
-</header>
-<main>
-    <div class="left-column">
-      <div id="price-refinement"></div>
-      <div id="manufacturer-refinement"></div>
-      <div id="model-refinement"></div>
-      <div id="year-refinement"></div>
-      <div id="condition-refinement"></div>
-      <div id="fuel-refinement"></div>
-    </div>
-    <div class="right-column">
-      <div id="hits"></div>
-      <div id="pagination"></div>
-    </div>
-    <p style="clear:both;"></p>
-</main>
+
+  <p style="clear:both;"></p>
+
+</div>
 
 {{ partial "footer" . }}

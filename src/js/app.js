@@ -7,29 +7,39 @@ var search = instantsearch({
   urlSync: true
 });
 
+var hitTemplate =
+  '<article class="hit">' +
+      '<div class="product-picture-wrapper">' +
+        '<div class="product-picture"><img src="{{img}}" /></div>' +
+      '</div>' +
+      '<div class="product-desc-wrapper">' +
+        '<div class="product-name">{{{year}}} {{{manufacturer}}} {{{model}}}</div>' +
+        '<div class="product-type">{{{condition}}} | {{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}}</div>' +
+        '<div class="product-price">{{currency}} ${{#helpers.formatNumber}}{{price}}{{/helpers.formatNumber}}</div>' +
+        '<div class="product-rating">{{{location}}}</div>' +
+      '</div>' +
+  '</article>';
+
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-input'
   })
 );
-
+/*
+search.addWidget(
+  instantsearch.widgets.stats({
+    container: '#stats'
+  })
+);
+*/
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
-    hitsPerPage: 10,
+    hitsPerPage: 16,
     templates: {
-      empty: "We didn't find any results for the search <em>\"{{query}}\"</em>",
+      empty: "No encontramos resultados para su búsqueda <em>\"{{query}}\"</em>",
       /* item: document.getElementById('hit-template').innerHTML */
-      item: "<div class=\"hit\"> \
-        <div class=\"hit-image\"><img src=\"{{img}}\" alt=\"{{img}}\"></div> \
-        <div class=\"hit-content\"> \
-          <h3 class=\"hit-price\">${{price}} {{currency}}</h3> \
-          <h2 class=\"hit-name\">{{{year}}} {{{manufacturer}}} {{{model}}}</h2> \
-          <p class=\"hit-description\">{{{condition}}} - {{{mileage}}} Mi</p> \
-          <p class=\"hit-description\">{{{fuel}}}</p> \
-          <p class=\"hit-description\">{{{location}}}</p> \
-        </div> \
-      </div>"
+      item: hitTemplate
     },
   })
 );
@@ -61,7 +71,7 @@ search.addWidget(
       limit: 10,
       operator: 'or',
       templates: {
-        header: 'Marca'
+        header: 'Marcas'
       }/*,
       searchForFacetValues: {
         placeholder: 'Entrar Marca',
@@ -80,7 +90,7 @@ search.addWidget(
       limit: 10,
       operator: 'or',
       templates: {
-        header: 'Modelo'
+        header: 'Modelos'
       }
     })
   );
@@ -135,5 +145,18 @@ search.addWidget(
     container: '#pagination'
   })
 );
-
+/*
+search.addWidget(
+  instantsearch.widgets.sortBySelector({
+    container: '#sort-by-selector',
+    indices: [
+      {name: 'vehicules', label: 'Más relevantes'},
+      {name: 'vehicules_price_asc', label: 'Precio: menor a mayor'},
+      {name: 'vehicules_price_desc', label: 'Precio: mayor a menor'},
+      {name: 'vehicules_year_desc', label: 'Año: nuevo a viejo'},
+      {name: 'vehicules_year_asc', label: 'Año: viejo a nuevo'}
+    ]
+  })
+);
+*/
 search.start();
