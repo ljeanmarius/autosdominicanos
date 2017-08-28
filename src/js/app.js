@@ -25,13 +25,13 @@ search.addWidget(
     container: '#search-input'
   })
 );
-/*
+
 search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats'
   })
 );
-*/
+
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
@@ -145,7 +145,7 @@ search.addWidget(
     container: '#pagination'
   })
 );
-/*
+
 search.addWidget(
   instantsearch.widgets.sortBySelector({
     container: '#sort-by-selector',
@@ -158,5 +158,5 @@ search.addWidget(
     ]
   })
 );
-*/
+
 search.start();
