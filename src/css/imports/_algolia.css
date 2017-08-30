@@ -42,6 +42,10 @@
   font-size: 14px;
 }
 
+#my-price {
+  margin-top: -30px;
+}
+
 /*.ais-price-ranges--form {
   visibility: hidden;
 }
