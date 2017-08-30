@@ -24,7 +24,7 @@ input, textarea {
   transition: var(--hover-transition);
   z-index: 2;
   &:focus {
-    background-color: var(--white);
+    background-color: var(--grey-1);
   }
   &:focus + label {
     opacity: 1;

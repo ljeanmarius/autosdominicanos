@@ -21,22 +21,8 @@
   clear: both;
 }
 
-/* INPUT */
-header {
-  position: relative;
-  height: 60px;
-  margin-top: 20px;
-  /*margin-left: 10px;*/
-  text-align:center;
-}
-header img {
-  position: absolute;
-  top: 9px;
-  left: 0;
-  float: left;
-  max-width: 23%;
-}
 
+/* -------------- FACETS ---------------------------------------------- */
 
 .ais-range-slider--header {
   font-size: 16px;
@@ -47,25 +33,38 @@ header img {
   padding-bottom: 0px;
 }
 
+.ais-refinement-list--header {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .ais-refinement-list--label {
   font-size: 14px;
 }
 
-.ais-refinement-list--header {
-  font-weight: bold;
-    font-size: 16px;
+/*.ais-price-ranges--form {
+  visibility: hidden;
 }
 
-.ais-refinement-list--body {
-  padding-bottom: 10px;
+.ais-price-ranges--header {
+  font-weight: bold;
+  font-size: 16px;
 }
+.ais-price-ranges--link {
+  font-size: 14px;
+}
+
+.ais-price-ranges--input {
+  width: 100%;
+}
+*/
 
 /* -------------- SEARCH INPUT ---------------------------------------------- */
 
 .input-group #search-input {
   width: 100%;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  /*margin-right: 10px;
+  margin-bottom: 10px;*/
 }
 
 /* -------------- ASIDE ---------------------------------------------- */
@@ -240,29 +239,19 @@ aside {
 
 #results-topbar {
   display: block;
-  padding-bottom: 5px;
+  font-size: .7em;
+  padding-top: 10px;
   width: 100%;
   line-height: 22px; }
   #results-topbar:after {
     display: table;
     clear: both; }
   #results-topbar .sort-by {
-    font-size: .7em;
     font-weight: bold;
     color: #ff4400;
     float: right; }
   #results-topbar #sort-by-selector {
     display: inline-block; }
-
-#clear-all {
-  display: block;
-  margin-bottom: 16px; }
-  #clear-all .btn {
-    font-size: 13px; }
-
-#stats {
-  padding-right: 10px;
-  font-size: .8em; }
 
 /* ------------- HITS --------------------------------------------- */
 #hits {
@@ -275,7 +264,7 @@ aside {
 .hit {
   width: 24%;
   float: left;
-  padding: 10px 20px 1px;
+  padding: 10px 10px 1px;
   margin-bottom: 10px;
   border-bottom: solid 1px #EEE;
   margin: .5%;
@@ -283,16 +272,12 @@ aside {
   box-shadow: 0 0 3px #f6f6f6;
   position: relative; }
 
-  @media (max-width: 960px) {
-    .hit {
-      width: 49%; } }
 
   .hit .product-picture-wrapper {
     display: table;
     table-layout: fixed;
     width: 100%;
-    text-align: center;
-    margin-bottom: 10px; }
+    text-align: center; }
 
   .hit .product-picture {
     display: table-cell;
@@ -317,11 +302,11 @@ aside {
     font-weight: bold;
     color: #000000;
     font-size: .6em;
-    margin: 0 0 8px;
+    margin: 0 0 0;
     min-width: 120px; }
 
   .hit .product-type {
-    font-size: .6em;
+    font-size: .5em;
     margin: 0 0 10px;
     color: #a2a2a2; }
 

@@ -14,9 +14,8 @@ var hitTemplate =
       '</div>' +
       '<div class="product-desc-wrapper">' +
         '<div class="product-name">{{{year}}} {{{manufacturer}}} {{{model}}}</div>' +
-        '<div class="product-type">{{{condition}}} | {{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}}</div>' +
+        '<div class="product-type">{{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}} | {{{condition}}} <br> {{{location}}}</div>' +
         '<div class="product-price">{{currency}} ${{#helpers.formatNumber}}{{price}}{{/helpers.formatNumber}}</div>' +
-        '<div class="product-rating">{{{location}}}</div>' +
       '</div>' +
   '</article>';
 
@@ -28,7 +27,10 @@ search.addWidget(
 
 search.addWidget(
   instantsearch.widgets.stats({
-    container: '#stats'
+    container: '#stats',
+    templates: {
+      body: "{{nbHits}} resultados"
+    }
   })
 );
 
@@ -123,6 +125,21 @@ search.addWidget(
     }
   })
 );
+
+// search.addWidget(
+//   instantsearch.widgets.priceRanges({
+//     container: '#price-ranges',
+//     attributeName: 'price',
+//     labels: {
+//       currency: '$',
+//       separator: 'hasta',
+//       button: 'Go'
+//     },
+//     templates: {
+//       header: 'Precio'
+//     }
+//   })
+// );
 
 search.addWidget(
   instantsearch.widgets.rangeSlider({

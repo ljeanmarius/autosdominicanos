@@ -2,8 +2,9 @@
 {{ partial "nav" . }}
 
 <div class="content-wrapper">
-  <aside>
+  <aside id="side-menu">
     <section class="facet-wrapper">
+      <div id="year-refinement" class="facet"></div>
       <div id="price-refinement" class="facet"></div>
     </section>
     <section class="facet-wrapper">
@@ -11,14 +12,13 @@
       <div id="model-refinement" class="facet"></div>
     </section>
     <section class="facet-wrapper">
-      <div id="year-refinement" class="facet"></div>
       <div id="condition-refinement" class="facet"></div>
       <div id="fuel-refinement" class="facet"></div>
     </section>
   </aside>
 
-  <div class="results-wrapper">
-    <div class="input-group">
+  <div id="results" class="results-wrapper">
+    <div id="input-search" class="input-group">
        <input type="text" id="search-input" placeholder="Busca marca, modelo o lugar">
     </div>
 
