@@ -10,12 +10,14 @@ var search = instantsearch({
 var hitTemplate =
   '<article class="hit">' +
       '<div class="product-picture-wrapper">' +
-        '<div class="product-picture"><img src="{{img}}" /></div>' +
+        '<div class="product-picture">' +
+          '<div class="product-price">{{currency}} ${{#helpers.formatNumber}}{{price}}{{/helpers.formatNumber}}</div>' +
+          '<img src="{{img}}" />' +
+        '</div>' +
       '</div>' +
       '<div class="product-desc-wrapper">' +
         '<div class="product-name">{{{year}}} {{{manufacturer}}} {{{model}}}</div>' +
-        '<div class="product-type">{{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}} | {{{condition}}} <br> {{{location}}}</div>' +
-        '<div class="product-price">{{currency}} ${{#helpers.formatNumber}}{{price}}{{/helpers.formatNumber}}</div>' +
+        '<div class="product-type">{{{condition}}} | {{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}} <br> {{{location}}}</div>' +
       '</div>' +
   '</article>';
 

@@ -42,10 +42,6 @@
   font-size: 14px;
 }
 
-#my-price {
-  margin-top: -30px;
-}
-
 /*.ais-price-ranges--form {
   visibility: hidden;
 }
@@ -298,7 +294,7 @@ aside {
           height: inherit; } }
 
   .hit .product-desc-wrapper {
-    height: 100px;
+    height: 60px;
     width: 100%;
     overflow: hidden; }
 
@@ -319,16 +315,21 @@ aside {
     margin-bottom: 10px; }
 
   .hit .product-price {
-    font-size: 0.6em;
-    font-weight: bold;
-    color: #ffffff;
-
-    background: #ff4400;
-    padding: 4px;
-    border-radius: 3px;
-
-    float: right;
-    letter-spacing: -1px; }
+     float: left;
+     position: absolute;
+     opacity: 0.8;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; // IE8
+     filter: alpha(opacity=80); // IE 5-7
+     left: 10px;
+     top: 133px;
+     z-index: 1000;
+     font-size: .6em;
+     font-weight: bold;
+     color: #fff;
+     background: #FF4400;
+     padding: 4px;
+     border-radius: 3px;
+     letter-spacing: -1px; }
 
   .hit em {
     color: #000000;
