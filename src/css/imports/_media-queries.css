@@ -6,7 +6,20 @@
 
 @media (max-width: 960px) {
   .hit {
-    width: 49%; } }
+    width: 92%; }
+  .input-group #search-input {
+    width: 92%; }
+  #results-topbar {
+    width: 92%; }
+  .hit .product-price {
+    left: 45px;
+  }
+  .hit .product-desc-wrapper {
+    padding-left: 35px; }
+  .ais-range-slider--pips {
+    visibility: hidden;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .ais-refinement-list--header {
