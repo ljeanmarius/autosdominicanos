@@ -317,11 +317,9 @@ aside {
   .hit .product-price {
      float: left;
      position: absolute;
-     opacity: 0.8;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; // IE8
-     filter: alpha(opacity=80); // IE 5-7
-     left: 10px;
+     left: 13px;
      top: 133px;
+     opacity: 0.8;
      z-index: 1000;
      font-size: .6em;
      font-weight: bold;

@@ -1,8 +1,8 @@
-<div class="pv6 pv6-l ph3 bg-center cover" style="background-image: url('{{.imageUrl}}')">
-  <div class="mw7 center ph3">
-    <div class="db mb3">
-      <div class="mw7 relative mb3">
-        <h1 class="f2 f1-l b lh-title mb3 black mw6">
+<div class="pv2 pv2-l ph3 bg-center cover" style="background-image: url('{{.imageUrl}}')">
+  <div class="mw7">
+    <div class="db">
+      <!-- <div class="mw7 relative mb3">
+        <h1 class="b lh-title mb3 black mw6">
           {{.title}}
         </h1>
       </div>
@@ -12,7 +12,14 @@
           <a href="/cars" style="text-decoration:none;">{{.subtitle}}</a>
         </p>
         {{ end }}
+      </div> -->
+      <div id="quick-search-condition" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
+      <div id="quick-search-makes" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
+      <div id="quick-search-models" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
+      <div style="float: left; padding-left: 10px;">
+        <button type="submit" class="btn w-100 w-auto-ns raise" onclick="window.location.replace('/cars/' + window.location.search);">Buscar</button>
       </div>
+      <p style="clear:both;"></p>
     </div>
   </div>
 </div>

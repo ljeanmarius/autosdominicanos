@@ -37,7 +37,12 @@
 {{ partial "svg" . }}
 
 <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<script src="/app.js"></script>
+
+{{if (not .IsHome)}}
+	<script src="/app.js"></script>
+{{ else }}
+	<script src="/search.js"></script>
+{{ end }}
 
 </body>
 
