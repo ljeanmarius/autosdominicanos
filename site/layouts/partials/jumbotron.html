@@ -1,24 +1,16 @@
 <div class="pv2 pv2-l ph3 bg-center cover" style="background-image: url('{{.imageUrl}}')">
-  <div class="mw7">
+  <div>
     <div class="db">
-      <!-- <div class="mw7 relative mb3">
-        <h1 class="b lh-title mb3 black mw6">
-          {{.title}}
-        </h1>
+      <div class="quick-search-filters">
+        <div id="quick-search-condition" class="quick-search-box"></div>
+        <div id="quick-search-makes" class="quick-search-box"></div>
+        <div id="quick-search-models" class="quick-search-box"></div>
+        <!-- <div style="float: left; padding-left: 10px;">
+          <button type="submit" class="btn w-100 w-auto-ns raise" onclick="window.location.replace('/cars/' + window.location.search);">Buscar</button>
+        </div> -->
       </div>
-      <div class="mw7 relative bg-fix-primary">
-        {{ if .subtitle }}
-        <p class="b f4 di lh-title mb3 white mw6 bg-primary">
-          <a href="/cars" style="text-decoration:none;">{{.subtitle}}</a>
-        </p>
-        {{ end }}
-      </div> -->
-      <div id="quick-search-condition" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
-      <div id="quick-search-makes" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
-      <div id="quick-search-models" style="float: left; width: 150px; margin-right: 10px; margin-bottom:10px; padding: 10px; border: 2px solid #FF4400; background: #F5F3F2; border-radius: 3%;"></div>
-      <div style="float: left; padding-left: 10px;">
-        <button type="submit" class="btn w-100 w-auto-ns raise" onclick="window.location.replace('/cars/' + window.location.search);">Buscar</button>
-      </div>
+      <div id="current-refined-values" class="search-items"></div>
+      <div id="hits" class="quick-search-hits"></div>
       <p style="clear:both;"></p>
     </div>
   </div>

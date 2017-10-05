@@ -23,7 +23,9 @@ var hitTemplate =
 
 search.addWidget(
   instantsearch.widgets.searchBox({
-    container: '#search-input'
+    container: '#search-input',
+    reset: false,
+    magnifier: false,
   })
 );
 

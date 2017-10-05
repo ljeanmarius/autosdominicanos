@@ -5,10 +5,23 @@
 @custom-media --breakpoint-large screen and (min-width: 60em); /* 960px */
 
 @media (max-width: 960px) {
+  .quick-search-filters {
+    width: 100%;
+  }
+  .quick-search-box {
+    width: 100%;
+  }
+  .quick-search-hits {
+    width: 100%;
+  }
   .hit {
     width: 92%; }
-  .input-group #search-input {
-    width: 92%; }
+  .hit-hp {
+    width: 45%; }
+  .ais-search-box {
+    width: 92%;
+    max-width: none;
+  }
   #results-topbar {
     width: 92%; }
   .hit .product-price {
@@ -16,8 +29,8 @@
   }
   .hit .product-desc-wrapper {
     padding-left: 35px; }
-  .ais-range-slider--pips {
-    visibility: hidden;
+  .ais-range-slider--value {
+      visibility: hidden;
   }
 }
 
