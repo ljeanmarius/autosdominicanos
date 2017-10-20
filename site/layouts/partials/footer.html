@@ -38,10 +38,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.1.4/dist/instantsearch.min.js"></script>
 
-{{if (not .IsHome)}}
-	<script src="/app.js"></script>
-{{ else }}
+{{if .IsHome }}
 	<script src="/search.js"></script>
+{{ else if eq .URL "/vehicule/" }}
+	<script src="/searchvehicule.js"></script>
+{{ else }}
+	<script src="/app.js"></script>
 {{ end }}
 
 </body>

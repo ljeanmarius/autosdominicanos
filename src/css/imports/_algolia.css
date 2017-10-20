@@ -831,3 +831,31 @@ a.clear-all:hover {
 .ais-clear-all--link {
   text-decoration: none;
 }
+
+/* Vehicule details */
+.vehicule-details-left {
+  float: left;
+  width: 30%;
+  margin-top: 5px;
+  /*border: solid 1px #888;*/
+}
+
+.vehicule-details-left .vehicule-picture-hp img {
+  height: 242px;
+  max-width: 100%; }
+  @media (min-width: 1400px) {
+    .hit-hp .product-picture-hp img {
+      height: inherit; } }
+
+.vehicule-details-right {
+  float: left;
+  border: solid 1px #595756;
+  margin-top: 5px;
+}
+
+.vehicule-detail {
+  background: #F5F3F2;
+  font-size: 15px;
+  margin: 5px;
+  padding: 5px;
+}

@@ -28,7 +28,8 @@ export default {
   entry: {
     app: ["./js/app"],
     cms: ["./js/cms"],
-    search: ["./js/search"]
+    search: ["./js/search"],
+    searchvehicule: ["./js/searchvehicule.js"]
   },
   output: {
     path: path.join(__dirname, "dist"),

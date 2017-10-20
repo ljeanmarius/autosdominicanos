@@ -12,11 +12,11 @@ var hitTemplate =
       '<div class="product-picture-wrapper">' +
         '<div class="product-picture">' +
           '<div class="product-price">{{currency}} ${{#helpers.formatNumber}}{{price}}{{/helpers.formatNumber}}</div>' +
-          '<img src="{{img}}" />' +
+          '<a href="/vehicule?id={{objectID}}"><img src="{{img}}" /></a>' +
         '</div>' +
       '</div>' +
       '<div class="product-desc-wrapper">' +
-        '<div class="product-name">{{{year}}} {{{manufacturer}}} {{{model}}}</div>' +
+        '<div class="product-name"><a href="/vehicule?id={{objectID}}">{{{year}}} {{{manufacturer}}} {{{model}}}</a></div>' +
         '<div class="product-type">{{{condition}}} | {{#helpers.formatNumber}}{{mileage}}{{/helpers.formatNumber}} Mi | {{{fuel}}} <br> {{{location}}}</div>' +
       '</div>' +
   '</article>';
